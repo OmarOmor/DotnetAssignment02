@@ -1,0 +1,114 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+.header {
+   
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color : black;
+}
+
+.header-text{
+    text-align : center;
+    font-size : 40px;
+    font-weight : 100;
+}
+
+
+
+
+
+.container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 5rem;
+}
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    width: 200px;
+    padding: 1rem;
+    height : 100vh;
+}
+
+    .sidebar ul {
+        list-style-type: none;
+        padding-left : 0;
+    }
+
+        .sidebar ul li {
+            margin: 1rem 0;
+        }
+
+            .sidebar ul li a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 0.5rem;
+                transition: background 0.3s;
+                text-align: center;
+                border-radius: 7.5px;
+            }
+
+                .sidebar ul li a:hover {
+                    background-color: #575757;
+                    border-radius : 7.5px;
+                }
+
+                
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+    .main-content h1 {
+        margin-bottom: 1rem;
+    }
+
+    .main-content p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+.solid {
+    border-top: 3px solid #bbb;
+}

@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="header header-text">
+    <a asp-controller="Home" asp-action="Index">DASHBOARD</a>
+</div>
+
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+
+        <hr class="solid"/>
+
+        <ul>
+            
+            <li><a href="#">Equipments</a></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Assigned Members</a></li>
+            <li><a href="#">Equipped Members</a></li>
+        </ul>
+
+    </div>
+    <div class="main-content">
+        <h1>Welcome to the Dashboard</h1>
+        <p>This is the main content area.</p>
+    </div>
+</div>
