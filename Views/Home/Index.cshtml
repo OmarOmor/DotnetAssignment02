@@ -2,6 +2,8 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model Inventory
+
 <div class="header header-text">
     <a asp-controller="Home" asp-action="Index">DASHBOARD</a>
 </div>
@@ -27,7 +29,24 @@
 
     </div>
     <div class="main-content">
-        <h1>Welcome to the Dashboard</h1>
-        <p>This is the main content area.</p>
+
+        <h3>MEMBERS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var member in Model.Members)
+                {
+                    <tr>
+                        <td>@member.FirstName</td>
+                        <td>@member.LastName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 </div>

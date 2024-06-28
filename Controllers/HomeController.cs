@@ -15,7 +15,18 @@ namespace Assignment02.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            Inventory inventory = new Inventory();
+            Dictionary<string,int> equipments = inventory.Equipments;
+            List<Member> members = inventory.Members;
+
+            var inventoryModel = new Inventory
+            {
+                Equipments = equipments,
+                Members = members
+
+            };
+
+            return View(inventoryModel);
         }
 
         public IActionResult Privacy()
