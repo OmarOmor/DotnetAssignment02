@@ -147,3 +147,17 @@ h3 {
     font-size: 40px;
     font-weight: 100;
 }
+
+
+#members {
+    display: none;
+    
+}
+
+#equipments {
+    display : none;
+}
+
+#equipped-members {
+    display : none;
+}

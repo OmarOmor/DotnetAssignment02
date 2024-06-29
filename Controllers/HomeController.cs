@@ -16,7 +16,7 @@ namespace Assignment02.Controllers
         public IActionResult Index()
         {
             Inventory inventory = new Inventory();
-            Dictionary<string,int> equipments = inventory.Equipments;
+            List<Equipment> equipments = inventory.Equipments;
             List<Member> members = inventory.Members;
 
             var inventoryModel = new Inventory

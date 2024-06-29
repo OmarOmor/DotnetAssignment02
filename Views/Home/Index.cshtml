@@ -20,33 +20,88 @@
         <hr class="solid"/>
 
         <ul>
-            
-            <li><a href="#">Equipments</a></li>
-            <li><a href="#">Members</a></li>
-            <li><a href="#">Assigned Members</a></li>
-            <li><a href="#">Equipped Members</a></li>
+            <!--functions are called from site.js file-->
+
+
+            <li><a href="#" onclick="showEquipments()">Equipments</a></li>
+            <li><a href="#" onclick="showMembers()">Members</a></li>
+            <li><a href="#" onclick="showEquippedMembers()">Equipped Members</a></li>
         </ul>
 
     </div>
     <div class="main-content">
 
-        <h3>MEMBERS</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var member in Model.Members)
-                {
+        <!--Show member table when Members button is pressed-->
+        <div id="members">
+            <h3>MEMBERS</h3>
+            <table>
+                <thead>
                     <tr>
-                        <td>@member.FirstName</td>
-                        <td>@member.LastName</td>
+                        <th>First Name</th>
+                        <th>Last Name</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var member in Model.Members)
+                    {
+                        <tr>
+                            <td>@member.FirstName</td>
+                            <td>@member.LastName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!--Show equipment table when equipments button is pressed-->
+        <div id="equipments">
+            <h3>EQUIPMENTS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Equipment Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Equipments)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Price</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!--Show equipped-member table when equipped-members button is pressed-->
+        <div id="equipped-members">
+            <h3>EQUIPPED MEMBERS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Member Name</th>
+                        <th>Assigned Equipment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var em in Model.EquippedMembers)
+                    {
+                        <tr>
+                            <td>@em.Key</td>
+                            <td>@em.Value</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </div>
+
+
+
+
+
+
